@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+
+	<script src = "js/script.js"> </script>
+        
+    <link rel="stylesheet" href="https://use.typekit.net/wpl6ppo.css">
+
+	<link rel="stylesheet" href="styling-front-page.css">
+
+    <title> Is This Sunscreen Reef Safe? </title>
+</head>
+
+<body>
+    <!-- <h1 id = "mainTitle" style = "font-size: 50px; font-style: normal; font-family: eckmannpsych-small, sans-serif; color: #136ce8; padding-left: 600px" > Is This Sunscreen Reef Safe? </h1> -->
+	<h1> Is This Sunscreen Reef Safe? </h1>
+
+	<div>
+    <h2 style = "padding-left: 100px; font-size: 20px; display: inline; font-family: eckmannpsych-small, sans-serif; color: #f5bc20"> How Safe is Your Sunscreen? </h4>
+    <h2 style = "padding-left: 200px; font-size: 20px; display: inline; font-family: eckmannpsych-small, sans-serif; color: #d6381c"> No-No Ingredients </h4>
+	<h2 style = "padding-left: 300px; font-size: 20px; display: inline; font-family: eckmannpsych-small, sans-serif; color: #d6381c"> About Us </h4>
+	<h2 style = "padding-left: 400px; font-size: 20px; display: inline; font-family: eckmannpsych-small, sans-serif; color: #d6381c"> Contact Us </h4>
+
+    </div>
+
+	<div class="topnav-centered">
+		<input type="text" id= "searchInput" whenuserpressesenter= "searching()" placeholder="Type sunscreen here...e.g. 'purito comfy water'">
+	</div>
+
+
+	<script>
+
+	<badDatabase id= "badDatabase">
+		<sunscreen> AOS ART OF SPORT Skin Armour Sunscreen SPF 50 </sunscreen>
+		<sunscreen> AVEENO Active Naturals Protect Hydrate SPF 30 </sunscreen>
+		<sunscreen> AVEENO Active Naturals Protect Hydrate SPF 45 </sunscreen>
+		<sunscreen> AVEENO Active Naturals Protect Hydrate SPF 60 </sunscreen>
+	</badDatabase>
+
+
+	
+	function searching(event) {
+		var userInput = getElementById("searchInput").value; //assigns the user input to a variable
+		var userInput = userInput.split(" ")
+		var words = ['AVEENO Baby Sensitive Skin Sunscreen SPF 50',
+			'AVEENO Baby Sensitive Skin Face Sunscreen Stick SPF 50',
+            'BABO BOTANICALS Clear Zinc Sunscreen Lotion SPF 30'];
+
+		for (i = 0; i < userInput.length; i++) {
+			var words = words.filter(word => word.toLowerCase().includes(userInput[i].toLowerCase()));;
+		}
+
+	console.log(words);
+	}
+
+	</script>
+	
+
+</body>
+</html>
