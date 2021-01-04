@@ -11,6 +11,8 @@
 
 	<link rel="stylesheet" href="styling-front-page.css">
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title> Is This Sunscreen Reef Safe? </title>
 </head>
 
@@ -28,23 +30,32 @@
 
 	<div class="topnav-centered">
 		<input type="text" id= "searchInput" whenuserpressesenter= "searching()" placeholder="Type sunscreen here...e.g. 'purito comfy water'">
+		<button type="submit" id="submit" onclick= "searching()"><i class="fa fa-search" aria-hidden="true"></i></button>
 	</div>
 
 
 	<script>
 
-	<badDatabase id= "badDatabase">
-		<sunscreen> AOS ART OF SPORT Skin Armour Sunscreen SPF 50 </sunscreen>
-		<sunscreen> AVEENO Active Naturals Protect Hydrate SPF 30 </sunscreen>
-		<sunscreen> AVEENO Active Naturals Protect Hydrate SPF 45 </sunscreen>
-		<sunscreen> AVEENO Active Naturals Protect Hydrate SPF 60 </sunscreen>
-	</badDatabase>
+	//<badDatabase id= "badDatabase">
+		//<sunscreen> AOS ART OF SPORT Skin Armour Sunscreen SPF 50 </sunscreen>
+		//<sunscreen> AVEENO Active Naturals Protect Hydrate SPF 30 </sunscreen>
+		//<sunscreen> AVEENO Active Naturals Protect Hydrate SPF 45 </sunscreen>
+		//<sunscreen> AVEENO Active Naturals Protect Hydrate SPF 60 </sunscreen>
+	//</badDatabase>
 
-
+	/*
+	input.addEventListener("keyup", searching(event) {
+		if (event.keyCode === 13) {
+			event.preventDefault();
+			document.getElementById("submit").click();
+		}
+	});
+	*/
 	
-	function searching(event) {
-		var userInput = getElementById("searchInput").value; //assigns the user input to a variable
+	function searching() {
+		var userInput = document.getElementById("searchInput").value; //assigns the user input to a variable
 		var userInput = userInput.split(" ")
+
 		var words = ['AVEENO Baby Sensitive Skin Sunscreen SPF 50',
 			'AVEENO Baby Sensitive Skin Face Sunscreen Stick SPF 50',
             'BABO BOTANICALS Clear Zinc Sunscreen Lotion SPF 30'];
@@ -53,7 +64,7 @@
 			var words = words.filter(word => word.toLowerCase().includes(userInput[i].toLowerCase()));;
 		}
 
-	console.log(words);
+		console.log(words);
 	}
 
 	</script>
