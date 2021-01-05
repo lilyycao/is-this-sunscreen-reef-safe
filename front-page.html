@@ -21,54 +21,60 @@
 
 	<div>
 		<header>
-					<h2 style= "color: #f5bc20;"> How Safe is Your Sunscreen? </h2>
-					<h2> No-No Ingredients </h2>
-					<h2> About Us </h2>
-					<h2> Contact Us </h2>
+			<h2 style="color: #f5bc20;"> How Safe is Your Sunscreen? </h2>
+			<h2> No-No Ingredients </h2>
+			<h2> About Us </h2>
+			<h2> Contact Us </h2>
 		</header>
 	</div>
 
 	<div class="topnav-centered">
-		<input type="text" id= "searchInput" whenuserpressesenter= "searching()" placeholder="Type sunscreen here...e.g. 'purito comfy water'">
-		<button type="submit" id="submit" onclick= "searching()"><i class="fa fa-search" aria-hidden="true"></i></button>
+		<input type="text" id="searchInput" whenuserpressesenter="searching()" placeholder="Type sunscreen here...e.g. 'purito comfy water'">
+		<button type="submit" id="submit" onclick="searching()"><i class="fa fa-search" aria-hidden="true"></i></button>
 	</div>
+
+	<div <p id="output"></p>>
+	</div>
+
+	
 
 
 	<script>
 
-	//<badDatabase id= "badDatabase">
+		//<badDatabase id= "badDatabase">
 		//<sunscreen> AOS ART OF SPORT Skin Armour Sunscreen SPF 50 </sunscreen>
 		//<sunscreen> AVEENO Active Naturals Protect Hydrate SPF 30 </sunscreen>
 		//<sunscreen> AVEENO Active Naturals Protect Hydrate SPF 45 </sunscreen>
 		//<sunscreen> AVEENO Active Naturals Protect Hydrate SPF 60 </sunscreen>
-	//</badDatabase>
+		//</badDatabase>
 
-	var enterInput = document.getElementById("searchInput"); 
-	enterInput.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			document.getElementById("submit").click();
+		var enterInput = document.getElementById("searchInput");
+		enterInput.addEventListener("keyup", function (event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				document.getElementById("submit").click();
+			}
+		});
+
+
+		function searching() {
+			var userInput = document.getElementById("searchInput").value; //assigns the user input to a variable
+			var userInput = userInput.split(" ")
+
+			var words = ['AVEENO Baby Sensitive Skin Sunscreen SPF 50',
+				'AVEENO Baby Sensitive Skin Face Sunscreen Stick SPF 50',
+				'BABO BOTANICALS Clear Zinc Sunscreen Lotion SPF 30'];
+
+			for (i = 0; i < userInput.length; i++) {
+				var words = words.filter(word => word.toLowerCase().includes(userInput[i].toLowerCase()));;
+			}
+
+
+			document.getElementById("output").innerHTML = words;
 		}
-	});
-	
-	
-	function searching() {
-		var userInput = document.getElementById("searchInput").value; //assigns the user input to a variable
-		var userInput = userInput.split(" ")
-
-		var words = ['AVEENO Baby Sensitive Skin Sunscreen SPF 50',
-			'AVEENO Baby Sensitive Skin Face Sunscreen Stick SPF 50',
-            'BABO BOTANICALS Clear Zinc Sunscreen Lotion SPF 30'];
-
-		for (i = 0; i < userInput.length; i++) {
-			var words = words.filter(word => word.toLowerCase().includes(userInput[i].toLowerCase()));;
-		}
-
-		console.log(words);
-	}
 
 	</script>
-	
+
 
 </body>
 </html>
