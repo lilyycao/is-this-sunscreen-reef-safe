@@ -33,10 +33,12 @@
 		<button type="submit" id="submit" onclick="searching()"><i class="fa fa-search" aria-hidden="true"></i></button>
 	</div>
 
-	<div <p id="output"></p>
+	<div <p id="outputGood"></p>
 	</div>
 
-	
+	<div <p id="outputBad"></p>
+	</div>
+
 
 
 	<script>
@@ -61,17 +63,124 @@
 			var userInput = document.getElementById("searchInput").value; //assigns the user input to a variable
 			var userInput = userInput.split(" ")
 
-			var words = ['AVEENO Baby Sensitive Skin Sunscreen SPF 50',
+			var good = [
+				'ALL GOOD SPF 30 Sport Mineral Sunscreen Lotion',
+				'AVEENO Baby Sensitive Skin Sunscreen SPF 50',
 				'AVEENO Baby Sensitive Skin Face Sunscreen Stick SPF 50',
-				'BABO BOTANICALS Clear Zinc Sunscreen Lotion SPF 30'];
+				'AVEENO Sensitive Skin SPF 50 Sunscreen',
+				'AVEENO Sensitive Skin Face SPF 50 Sunscreen',
+				'BABO BOTANICALS Clear Zinc Sunscreen Lotion SPF 30',
+				'BEAUTYCOUNTER Countersun Mineral Sunscreen Lotion SPF 30',
+				'COOLA full spectrum 360° mineral sun silk creme organic face sunscreen SPF 30',
+				'COPPERTONE Mineral Sunscreen Lotion Pure & Simple SPF 50',
+				'COPPERTONE Mineral Sunscreen Lotion Pure & Simple Face SPF 50',
+				'COPPERTONE Mineral Sunscreen Lotion Pure & Simple Baby SPF 50',
+				'COPPERTONE Mineral Sunscreen Lotion Pure & Simple Kids SPF 50',
+				'FIRST AID BEAUTY Weightless Liquid Mineral SPF 30',
+				'HAWAIIAN TROPIC Matte Effect Mineral Enriched Sunscreen Lotion',
+				'HELLO BELLO SPF 50 Sunscreen Mineral Lotion',
+				'INNISFREE Daily Mild Sunscreen SPF50+ PA++++',
+				'IT COSMETICS Your Skin But Better CC+ Cream with SPF 50+',
+				'KARI GRAN Essential SPF 28',
+				'KOKUA SUN CARE Hawaiian Natural Zinc Sunscreen Spf 50 / 80 Min Water Resistance',
+				'LOVE SUN BODY 100% Natural Origin Mineral Sunscreen Spf 50 Fragrance-Free',
+				'MAMA KULEANA Reef Safe Sunscreen',
+				'MANDA Organic Sun Creme (SPF 50)',
+				'MANDA Organic Sun Paste (SPF 50)',
+				'NEUTROGENA Sheer Zinc Body',
+				'NEUTROGENA Sheer Zinc Face',
+				'RAW LOVE Reef Safe Sunscreen',
+				'REN Clean Screen Mineral SPF 30',
+				'STREAM2SEA Sunscreen for Face and Body SPF 30',
+				'SUNDAZE C-Shells SPF 30',
+				'SUNTEGRITY Unscented Natural Mineral Sunscreen for Body Broad Spectrum SPF 30',
+				'THINKSPORT SPF 50+ Sunscreen'
+			];
 
 			for (i = 0; i < userInput.length; i++) {
-				var words = words.filter(word => word.toLowerCase().includes(userInput[i].toLowerCase()));;
+				var good = good.filter(word => word.toLowerCase().includes(userInput[i].toLowerCase()));;
 			}
 
+			var bad = [
+				'AOS ART OF SPORT Skin Armour Sunscreen SPF 50',
+				'AVEENO Active Naturals Protect + Hydrate SPF 30',
+				'AVEENO Active Naturals Protect + Hydrate SPF 45',
+				'AVEENO Active Naturals Protect + Hydrate SPF 60',
+				'BIORE UV Aqua Rich Watery Essence SPF50+/PA++++',
+				'CLARINS UV PLUS Anti-Pollution Sunscreen Multi-Protection Tint SPF 50',
+				'COPPERTONE Glow Sunscreen Lotion With Shimmer SPF 15',
+				'COPPERTONE Glow Sunscreen Lotion With Shimmer SPF 30',
+				'COPPERTONE Glow Sunscreen Lotion With Shimmer SPF 50',
+				'COPPERTONE Kids Continuous Spray SPF 50',
+				'COPPERTONE Kids Sunscreen Lotion SPF 50',
+				'COPPERTONE Sport Clear Sunscreen SPF 30',
+				'COPPERTONE Sport Clear Sunscreen SPF 50',
+				'COPPERTONE Sport Sunscreen Continuous Spray SPF 30',
+				'COPPERTONE Sport Sunscreen Lotion SPF 30',
+				'COPPERTONE Sport Sunscreen Lotion SPF 50',
+				'COPPERTONE Sunscreen Continuous Spray SPF 30',
+				'COPPERTONE Sunscreen Lotion SPF 15',
+				'COPPERTONE Sunscreen Lotion SPF 30',
+				'COPPERTONE Sunscreen Lotion SPF 50',
+				'COPPERTONE Sunscreen Lotion Defend & Care SPF 50',
+				'COPPERTONE Sunscreen Lotion Defend & Care Face SPF 50',
+				'COPPERTONE Sunscreen Spray Defend & Care SPF 50',
+				'COPPERTONE Sunscreen Stick Waterbabies SPF 50',
+				'COPPERTONE Tanning Sunscreen Lotion SPF 8',
+				'COPPERTONE Waterbabies Sunscreen Lotion SPF 50',
+				'COPPERTONE Waterbabies Whipped Sunscreen SPF 50',
+				'COSRX Aloe Soothing Sun Cream SPF50+ PA+++',
+				'COSRX Shield Fit Snail Essence Sun SPF50+ PA+++',
+				'EARTH’S RECIPE Waterful Sun Gel SPF 50+ PA+++',
+				'HAWAIIAN TROPIC Antioxidant Plus Lotion',
+				'HAWAIIAN TROPIC Antioxidant Plus Refresh Sunscreen Mist',
+				'HAWAIIAN TROPIC Dry Oil Clear Spray Sunscreens',
+				'HAWAIIAN TROPIC Island Sport Clear Spray Sunscreen',
+				'HAWAIIAN TROPIC Island Sport Lotion Sunscreen',
+				'HAWAIIAN TROPIC Sheer Touch Ultra Radiance Lotion Sunscreen',
+				'HAWAIIAN TROPIC Silk Hydration Weightless Clear Spray Sunscreen',
+				'HAWAIIAN TROPIC Silk Hydration Weightless Face Sunscreen',
+				'HAWAIIAN TROPIC Silk Hydration Weightless Lotion Sunscreen',
+				'HAWAIIAN TROPIC Tanning Lotion',
+				'HAWAIIAN TROPIC Tanning Oil Pump Spray',
+				'HAWAIIAN TROPIC Tropical Lip Balm',
+				'INNISFREE Blueberry Rebalancing Watery Sun Cream SPF45 PA+++',
+				'INNISFREE Tone Up No Sebum Sunscreen SPF50+ PA++++',
+				'JACK BLACK Double-Duty Face Moisturizer SPF 20',
+				'KIEHL\'S Super Fluid Daily UV Defense Sunscreen Broad Spectrum SPF 50 +',
+				'LA MER The Broad Spectrum SPF 50 UV Protecting Fluid',
+				'LANCOME UV Expert Aquagel Defense Primer & Moisturizer SPF 50',
+				'MISSHA All Around Safe Block Essence Sun Milk SPF50+/PA+++',
+				'MISSHA All Around Safe Block Soft Finish Sun Milk SPF50+/PA+++',
+				'NEOGEN Dermalogy Day-light Protection Sunscreen SPF 50+/PA+++',
+				'NEUTROGENA Beach Defense Sunscreen Lotion',
+				'NEUTROGENA Beach Defense Sunscreen Spray',
+				'NEUTROGENA Beach Defense Sunscreen Spray Kids',
+				'NEUTROGENA Clear Face Lotion',
+				'NEUTROGENA Cooldry Sport Sunscreen Lotion',
+				'NEUTROGENA Cooldry Sport Sunscreen Spray',
+				'NEUTROGENA Hydro Boost Water Gel Sunscreen',
+				'NEUTROGENA Ultra Sheer Body Mist Sunscreen',
+				'NEUTROGENA Ultra Sheer Dry-Touch Lotion',
+				'NEUTROGENA Ultra Sheer Face Sunscreen',
+				'NEUTROGENA Ultra Sheer Face & Body Stick Sunscreen SPF 50+',
+				'NEUTROGENA Ultra Sheer Water-Light Daily Face Sunscreen SPF 60',
+				'NEUTROGENA Wet Skin Sunscreen Spray Kids',
+				'SHISEIDO Urban Environment Oil-Free UV Protector Broad Spectrum Face Sunscreen SPF 42',
+				'SHISEIDO WASO: Color-Smart Day Moisturizer SPF 30 Sunscreen',
+				'SUPERGOOP! Play Everyday Lotion',
+				'SUPERGOOP! Unseen Sunscreen SPF 40'
+			];
 
-			document.getElementById("output").innerHTML = words;
+            for (i = 0; i < userInput.length; i++) {
+                var bad = bad.filter(word => word.toLowerCase().includes(userInput[i].toLowerCase()));;
+            }
+
+
+			document.getElementById("outputGood").innerHTML = good;
+            document.getElementById("outputBad").innerHTML = bad;
 		}
+
 
 	</script>
 
