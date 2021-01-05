@@ -17,16 +17,16 @@
 </head>
 
 <body>
-    <!-- <h1 id = "mainTitle" style = "font-size: 50px; font-style: normal; font-family: eckmannpsych-small, sans-serif; color: #136ce8; padding-left: 600px" > Is This Sunscreen Reef Safe? </h1> -->
 	<h1> Is This Sunscreen Reef Safe? </h1>
 
 	<div>
-    <h2 style = "padding-left: 100px; font-size: 20px; display: inline; font-family: eckmannpsych-small, sans-serif; color: #f5bc20"> How Safe is Your Sunscreen? </h4>
-    <h2 style = "padding-left: 200px; font-size: 20px; display: inline; font-family: eckmannpsych-small, sans-serif; color: #d6381c"> No-No Ingredients </h4>
-	<h2 style = "padding-left: 300px; font-size: 20px; display: inline; font-family: eckmannpsych-small, sans-serif; color: #d6381c"> About Us </h4>
-	<h2 style = "padding-left: 400px; font-size: 20px; display: inline; font-family: eckmannpsych-small, sans-serif; color: #d6381c"> Contact Us </h4>
-
-    </div>
+		<header>
+					<h2 style= "color: #f5bc20;"> How Safe is Your Sunscreen? </h2>
+					<h2> No-No Ingredients </h2>
+					<h2> About Us </h2>
+					<h2> Contact Us </h2>
+		</header>
+	</div>
 
 	<div class="topnav-centered">
 		<input type="text" id= "searchInput" whenuserpressesenter= "searching()" placeholder="Type sunscreen here...e.g. 'purito comfy water'">
@@ -43,14 +43,14 @@
 		//<sunscreen> AVEENO Active Naturals Protect Hydrate SPF 60 </sunscreen>
 	//</badDatabase>
 
-	/*
-	input.addEventListener("keyup", searching(event) {
+	var enterInput = document.getElementById("searchInput"); 
+	enterInput.addEventListener("keyup", function(event) {
 		if (event.keyCode === 13) {
 			event.preventDefault();
 			document.getElementById("submit").click();
 		}
 	});
-	*/
+	
 	
 	function searching() {
 		var userInput = document.getElementById("searchInput").value; //assigns the user input to a variable

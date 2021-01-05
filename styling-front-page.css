@@ -11,7 +11,13 @@ h1 {
 	text-align: center 
 }
 
-h2 {}
+h2 {
+	padding-left: 230px;
+	font-size: 20px;
+	display: inline-flex;
+	color: #d6381c;
+	font-family: eckmannpsych-small, sans-serif;
+}
 
 .topnav-centered input[type=text] {
   float: none;
@@ -38,4 +44,23 @@ h2 {}
 	left: 76.3%;
 	transform: translate(-50%, -50%);
 }
+
+/*.nav{
+	display:flex;
+}
+
+.nav ul {
+	margin:0 3rem 0 0;
+	padding:0;
+	list-style:none;
+	display:flex;
+	flex:1 0 0%;
+	justify-content:space-between
+}
+
+.nav ul a {
+	display:block;
+	padding:5px 10px;
+}
+*/
 
