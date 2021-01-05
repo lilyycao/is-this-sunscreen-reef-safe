@@ -8,11 +8,10 @@ h1 {
 	font-style: normal;
 	font-family: eckmannpsych-small, sans-serif;
 	color: #136ce8; 
-	text-align: center 
 }
 
 h2 {
-	padding-left: 230px;
+	padding-left: 12%;
 	font-size: 20px;
 	display: inline-flex;
 	color: #d6381c;
