@@ -1,6 +1,4 @@
-﻿body
-{
-}
+﻿body {}
 h1 {
     id = "mainTitle";
 	text-align: center;
@@ -15,6 +13,14 @@ h2 {
 	font-size: 20px;
 	display: inline-flex;
 	color: #d6381c;
+	font-family: eckmannpsych-small, sans-serif;
+}
+
+h3 {
+	padding-left: 12%;
+	padding-top: 30px;
+	font-size: 30px;
+	color: #f5bc20;
 	font-family: eckmannpsych-small, sans-serif;
 }
 
@@ -37,29 +43,28 @@ h2 {
 	font-size: 22px;
 	color: #136ce8;
 	border: 1px solid grey;
-	border-left: none; /* Prevent double borders */
+	border-left: none; 
 	cursor: pointer;
 	top: 50%;
 	left: 76.3%;
 	transform: translate(-50%, -50%);
 }
 
-/*.nav{
-	display:flex;
+p {
+	padding-left: 12%;
+	padding-top: 40px;
+	font-size: 20px;
+	color: #136ce8;
 }
 
-.nav ul {
-	margin:0 3rem 0 0;
-	padding:0;
-	list-style:none;
-	display:flex;
-	flex:1 0 0%;
-	justify-content:space-between
+ul {
+	padding-left: 13%;
+	font-size: 20px;
+	color: #136ce8;
 }
 
-.nav ul a {
-	display:block;
-	padding:5px 10px;
-}
-*/
+
+
+
+
 
