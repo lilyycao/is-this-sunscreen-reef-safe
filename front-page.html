@@ -19,6 +19,7 @@
 <body>
 	<h1> Is This Sunscreen Reef Safe? </h1>
 
+	<!--
 	<div>
 		<header>
 			<h2 style="color: #f5bc20;"> How Safe is Your Sunscreen? </h2>
@@ -26,6 +27,18 @@
 			<h2> About Us </h2>
 			<h2> Contact Us </h2>
 		</header>
+	</div>
+	-->
+
+	<div class= "nav">
+		<nav> 
+			<ul> 
+				<li> How Safe is Your Sunscreen? </li>
+				<li><a href = "nono-ingredients.html"> No-No Ingredients </a></li>
+				<li><a href = "about-us.html"> About Us </a></li>
+				<li><a href = ""> Contact Us </a></li>
+			</ul>
+		</nav>
 	</div>
 
 	<div class="topnav-centered">
@@ -96,6 +109,8 @@
 				'SUNTEGRITY Unscented Natural Mineral Sunscreen for Body Broad Spectrum SPF 30',
 				'THINKSPORT SPF 50+ Sunscreen'
 			];
+
+		
 
 			for (i = 0; i < userInput.length; i++) {
 				var good = good.filter(word => word.toLowerCase().includes(userInput[i].toLowerCase()));;

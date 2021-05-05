@@ -1,13 +1,16 @@
 ﻿body {}
+
 h1 {
     id = "mainTitle";
 	text-align: center;
-	font-size: 50px;
+	font-size: 50px; 
 	font-style: normal;
 	font-family: eckmannpsych-small, sans-serif;
 	color: #136ce8; 
+	/* padding-top: 0.3%; */
 }
 
+/*
 h2 {
 	padding-left: 12%;
 	font-size: 20px;
@@ -15,13 +18,53 @@ h2 {
 	color: #d6381c;
 	font-family: eckmannpsych-small, sans-serif;
 }
+*/
 
 h3 {
 	padding-left: 12%;
-	padding-top: 30px;
+	padding-top: 5%;
 	font-size: 30px;
 	color: #f5bc20;
 	font-family: eckmannpsych-small, sans-serif;
+}
+
+.nav ul {
+	position: fixed;
+	width: 100%; 
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	color: #d6381c; 
+	overflow: hidden;
+	text-align: center;
+}
+
+.nav li {
+	display: inline;
+	/* float: left; */
+	color: #f5bc20;
+	font-family: eckmannpsych-small, sans-serif;
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.nav li a {
+    padding: 100px;
+    color: #d6381c;
+    display: inline;
+    font-size: 20px;
+    text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.nav li a:hover {
+    color: #f5bc20;
+}
+
+.nav .active {
+    color: #f5bc20;
 }
 
 .topnav-centered input[type=text] {
